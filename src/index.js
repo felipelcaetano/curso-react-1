@@ -6,7 +6,8 @@ import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
     //React.createElement(App), //Forma de se fazer sem JSX
-    <App />, document.getElementById('root')
+    <App />,
+    document.getElementById('root')
 );
 
 registerServiceWorker();
