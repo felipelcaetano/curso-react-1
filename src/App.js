@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './css/pure-min.css';
 import './css/side-menu.css';
-import {Link} from 'react-router';
+import {Link} from 'react-router-dom';
 
 class App extends Component {
 
@@ -16,24 +16,24 @@ class App extends Component {
 				</a>
 
 				<div id="menu">
-						<div className="pure-menu">
-								<a className="pure-menu-heading" href="#">Company</a>
+					<div className="pure-menu">
+						<a className="pure-menu-heading" href="#">Company</a>
 
-								<ul className="pure-menu-list">
-							{/* Utilizar Link ao inves de a para trabalhar com o react router */}
-										<li className="pure-menu-item"><Link to="#"
-										className="pure-menu-link">Home</Link></li>
-										<li className="pure-menu-item"><Link to="/autor"
-										className="pure-menu-link">Autor</Link></li>
-										<li className="pure-menu-item"><Link to="/livros"
-										className="pure-menu-link">Livro</Link></li>
-								</ul>
-						</div>
+						<ul className="pure-menu-list">
+						{/* Utilizar Link ao inves de a para trabalhar com o react router */}
+							<li className="pure-menu-item"><Link to="/"
+							className="pure-menu-link">Home</Link></li>
+							<li className="pure-menu-item"><Link to="/autores"
+							className="pure-menu-link">Autor</Link></li>
+							<li className="pure-menu-item"><Link to="/livros"
+							className="pure-menu-link">Livro</Link></li>
+						</ul>
+					</div>
 				</div>
 
 				<div id="main">
-						{/* acessa as propriedades do filho do router principal, atraves do argumento */}
-						{this.props.children}
+					{/* acessa as propriedades do filho do router principal, atraves do argumento */}
+					{this.props.children}
 				</div>
 			</div>
 		);
